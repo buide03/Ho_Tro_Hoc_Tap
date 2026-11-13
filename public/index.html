@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Luyện Toán, xem bài giảng và hỏi trợ giảng bằng tiếng Việt.">
+  <title>Góc Học Tập</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home"><span class="brand-mark" aria-hidden="true">∿</span>Góc Học Tập</a>
+    <nav aria-label="Điều hướng chính">
+      <a href="#home" data-tab="home">Trang chủ</a>
+      <a href="#practice" data-tab="practice">Làm bài tập</a>
+      <a href="#library" data-tab="library">Tài liệu &amp; bài giảng</a>
+    </nav>
+    <button class="chat-toggle" type="button" aria-controls="tutor" aria-expanded="false">✦ Trợ giảng</button>
+  </header>
+  <div class="layout">
+    <main id="main" aria-live="polite"><p>Đang tải bài học…</p></main>
+    <aside class="tutor" id="tutor" aria-labelledby="tutor-title">
+      <header class="tutor-header">
+        <span class="tutor-icon" aria-hidden="true">✦</span>
+        <div><h2 id="tutor-title">Trợ giảng</h2><p id="tutor-mode">Góc Học Tập</p></div>
+      </header>
+      <div class="messages" id="messages" role="log" aria-label="Hội thoại">
+        <div class="message assistant">Chào bạn! Bạn muốn giải một bài Toán hay xem mình nên ôn phần nào?</div>
+      </div>
+      <div class="chat-bottom">
+        <div class="suggestions" aria-label="Câu hỏi gợi ý">
+          <button type="button" data-prompt="Mình nên ôn gì?">Mình nên ôn gì?</button>
+          <button type="button" data-prompt="Giải thích định lý Pythagore">Giải thích Pythagore</button>
+        </div>
+        <form id="chat-form">
+          <label class="sr-only" for="question">Câu hỏi cho trợ giảng</label>
+          <input id="question" name="question" placeholder="Nhập câu hỏi của bạn…" required maxlength="1200">
+          <button type="submit" aria-label="Gửi câu hỏi">↑</button>
+        </form>
+      </div>
+    </aside>
+  </div>
+</body>
+</html>
